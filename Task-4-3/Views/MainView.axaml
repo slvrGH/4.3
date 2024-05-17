@@ -1,0 +1,47 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Task_4_3.ViewModels"
+             mc:Ignorable="d" 
+			 d:DesignWidth="900" 
+			 d:DesignHeight="650"
+			 Width="900"
+			 Height="610"
+             x:Class="Task_4_3.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <vm:MainViewModel />
+  </Design.DataContext>
+	<ItemsControl>
+		<Border HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="1">
+			<DockPanel>
+				<StackPanel Orientation="Horizontal"
+					  HorizontalAlignment="Stretch"
+					  VerticalAlignment="Top">
+					<TextBlock Margin="10" TextWrapping="Wrap">Home</TextBlock>
+					<TextBlock Margin="10" TextWrapping="Wrap">About</TextBlock>
+					<TextBlock Margin="10" TextWrapping="Wrap">Blog's main topic 1</TextBlock>
+					<TextBlock Margin="10" TextWrapping="Wrap">Blog's main topic 2</TextBlock>
+					<TextBlock Margin="10" TextWrapping="Wrap">Related topics</TextBlock>
+					<TextBlock Margin="10" TextWrapping="Wrap">Premium content</TextBlock>
+				</StackPanel>
+				
+				<StackPanel HorizontalAlignment="Right">
+					<TextBlock Margin="10" TextWrapping="Wrap">RSS</TextBlock>
+				</StackPanel>
+			</DockPanel>
+		</Border>
+		<StackPanel Margin="20"
+					Height="400"
+					Width="600"
+					HorizontalAlignment="Left">
+			<TextBlock Margin="0, 0, 0, 10" TextWrapping="Wrap">Sukhoi Su-57</TextBlock>
+			<TextBlock TextWrapping="Wrap" Text="{Binding Text}"></TextBlock>
+			<Image Margin="0,-52,0,10" Source="C:\Users\kosty\source\repos\Task-4-3\Task-4-3\su57.jpg"></Image>
+			<TextBlock Margin="0,-10,0,10">Tags: Tag1 Tag2 Tag3 Tag4</TextBlock>
+			<TextBlock HorizontalAlignment="Right" Margin="0,-27,0,10">Rate this article: 4/5</TextBlock>
+		</StackPanel>
+
+	</ItemsControl>
+</UserControl>
